@@ -1,0 +1,27 @@
+{
+  "name": "my-mern-project",
+  "version": "1.0.0",
+  "description": "My MERN project for deployment on Render",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "cd mern-app && npm install && npm run build"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "react-bootstrap": "^2.7.2",
+    "react-router-dom": "^6.9.0"
+   
+  },
+  "devDependencies": {
+    "concurrently": "^6.3.0"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hamdanahmad968/new-food.git"
+  },
+  "license": "MIT"
+}
