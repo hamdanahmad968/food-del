@@ -4,7 +4,7 @@
   "description": "My MERN project for deployment on Render",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node src/index.js",
     "build": "cd mern-app && npm install && npm run build"
   },
   "dependencies": {
