@@ -8,7 +8,7 @@ const model = require("./routes/CreateUser");
 const Displaydata = require("./routes/Displaydata")
 const Order = require("./routes/Orderdata");
  const MyOrder = require("./routes/myorderData")
-//  const path = require('path');
+ const path = require('path');
 
 
 
@@ -53,9 +53,10 @@ app.get("/", (req, res) => {
 });
 
 
-// app.get('*', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'build', 'index.html'));
-// });
+app.get('/',(req,res)=>{
+  app.use(express.static(path.resolve(__dirname,'mern-app','build')))
+  res.sendFile(path.resolve(__dirname,'mern-app','build','index.html'))
+})
 
 app.listen(port, () => {
   console.log(`server is running on port ${port}`);
