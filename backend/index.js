@@ -8,7 +8,6 @@ const model = require("./routes/CreateUser");
 const Displaydata = require("./routes/Displaydata")
 const Order = require("./routes/Orderdata");
  const MyOrder = require("./routes/myorderData")
- const path = require('path');
 
 
 
@@ -52,11 +51,13 @@ app.get("/", (req, res) => {
   res.send("connected backend");
 });
 
-
+if(process.env.NODE_ENV=='production'){
+  const path = require('path')
 app.get('/',(req,res)=>{
   app.use(express.static(path.resolve(__dirname,'mern-app','build')))
   res.sendFile(path.resolve(__dirname,'mern-app','build','index.html'))
 })
+}
 
 app.listen(port, () => {
   console.log(`server is running on port ${port}`);
